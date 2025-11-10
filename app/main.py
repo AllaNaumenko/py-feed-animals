@@ -1,10 +1,13 @@
 from __future__ import annotations
 
-from typing import List
-
 
 class Animal:
-    def __init__(self, name: str, appetite: int, is_hungry: bool = True) -> None:
+    def __init__(
+        self,
+        name: str,
+        appetite: int,
+        is_hungry: bool = True,
+    ) -> None:
         self.name = name
         self.appetite = appetite
         self.is_hungry = is_hungry
@@ -21,23 +24,9 @@ class Animal:
 
 
 class Cat(Animal):
-    def __init__(self, name: str, is_hungry: bool = True) -> None:
-        super().__init__(name, 3, is_hungry)
-
-    def catch_mouse(self) -> None:
-        print("The hunt began!")
-
-
-class Dog(Animal):
-    def __init__(self, name: str, is_hungry: bool = True) -> None:
-        super().__init__(name, 7, is_hungry)
-
-    def bring_slippers(self) -> None:
-        print("The slippers delivered!")
-
-
-def feed_animals(animals: List[Animal]) -> int:
-    total_food = 0
-    for animal in animals:
-        total_food += animal.feed()
-    return total_food
+    def __init__(
+        self,
+        name: str,
+        is_hungry: bool = True,
+    ) -> None:
+        super().__init__(name, 3,
